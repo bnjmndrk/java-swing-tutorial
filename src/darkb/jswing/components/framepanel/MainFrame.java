@@ -5,6 +5,7 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.WindowConstants;
 
 /**
  * @author BDark
@@ -20,7 +21,6 @@ public class MainFrame extends JFrame {
 	private static final long serialVersionUID = -278976973183067048L;
 	
 	private TextPanel textPanel;
-//	private JTextArea textArea;
 	private JButton btn;
 	private int count;
 	
@@ -50,8 +50,8 @@ public class MainFrame extends JFrame {
 		add(textPanel, BorderLayout.CENTER);
 		add(btn, BorderLayout.SOUTH);
 		
-		setSize(600, 500);								// give the app window some default size
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);	// close the application when windows "X" is selected
+		setSize(600, 500);											// give the app window some default size
+		setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);	// exit application when window "X" is selected to close
 		setVisible(true);
 	}
 
