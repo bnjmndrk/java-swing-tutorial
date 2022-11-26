@@ -7,6 +7,8 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.WindowConstants;
 
+import darkb.jswing.components.toolbar.Toolbar;
+
 /**
  * @author BDark
  * This class extends JSwing JFrame component and serves to abstract away the building of
@@ -21,6 +23,7 @@ public class MainFrame extends JFrame {
 	private static final long serialVersionUID = -278976973183067048L;
 	
 	private TextPanel textPanel;
+	private Toolbar toolbar;
 	private JButton btn;
 	private int count;
 	
@@ -29,6 +32,7 @@ public class MainFrame extends JFrame {
 		
 		
 		setLayout(new BorderLayout());
+		toolbar = new Toolbar();
 		btn = new JButton("Click Me!");
 		textPanel= new TextPanel();
 		count=0;
@@ -48,6 +52,7 @@ public class MainFrame extends JFrame {
 		});
 		
 		add(textPanel, BorderLayout.CENTER);
+		add(toolbar, BorderLayout.NORTH);
 		add(btn, BorderLayout.SOUTH);
 		
 		setSize(600, 500);											// give the app window some default size
